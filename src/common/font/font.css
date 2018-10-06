@@ -4,3 +4,21 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'AdobeHebrew-Bold';
+  src: url('./AdobeHebrew-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFang SC';
+  src: url('./PingFang-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFang Bold';
+  src: url('./PingFang-SC-Semibold.otf');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,11 +1,14 @@
 <template>
   <div class="nav-container">
-    <div class="mask-t"></div>
-    <div class="mask-l"></div>
-    <div class="mask-r"></div>
-    <div class="mask-b"></div>
+    <div class="mask-t mask"></div>
+    <div class="mask-l mask"></div>
+    <div class="mask-r mask"></div>
+    <div class="mask-b mask"></div>
     <div :class="!show_flag ? 'nav' : 'nav nav-show' ">
-      <div class="nav-logo"></div>
+      <div class="nav-logo">
+        <img src="../common/icon/keyboard.png" alt="">
+        <p>KeyBoardMan_Dany</p>
+      </div>
       <div class="nav-list">
         <router-link class="icon" to="/">
           <img class="icon-img" src="../common/icon/target.svg" alt="">
@@ -33,10 +36,13 @@
   
 </template>
 <style lang="scss" scope>
+  .mask {
+    z-index: 200;
+  }
   .mask-t {
     width: 100%;
     height: 10px;
-    background: #ff5959;
+    background: #fff;
     top: 0;
     position: fixed;
   }
@@ -73,6 +79,25 @@
     transition: .15s;
     .nav-logo {
       width: 30%;
+      display: inline-block;
+      float: left;
+      cursor: pointer;
+      opacity: .8;
+      transition: .15s;
+      &:hover {
+        opacity: 1;
+      }
+      img {
+        margin: 0px 20px;
+        width: 62px;
+        height: 22px;
+      }
+      p{
+        display: inline-block;
+        font-size: 17px;
+        color: #fff;
+        font-weight: bold;
+      }
     }
     .nav-list {
       width: 70%;
@@ -125,7 +150,7 @@
     methods: {
       navShow () {
         let scroll_nav = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
-        if (scroll_nav > 300) {
+        if (scroll_nav > 50) {
           this.show_flag = true
         } else {
           this.show_flag = false

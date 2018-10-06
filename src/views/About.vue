@@ -7,7 +7,7 @@
 <style lang="scss">
   .about {
     padding: 10px;
-    background: #ffad5a;
+    background: #fff;
     min-height: 1000px;
   }
 </style>

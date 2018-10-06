@@ -8,7 +8,7 @@
             <h1 id="first-line" class="line"></h1>
           </div>
           <div class="line-container">
-            <h1 id="second-line" class="line"></h1>
+            <h2 id="second-line" class="line"></h2>
           </div>
         </div>
       </div>
@@ -38,10 +38,10 @@ export default {
       logo.start()
       const first_line = document.querySelector('#first-line')
       const second_line = document.querySelector('#second-line')
-      init(first_line, { loop: false, strings: ['中文中文', '中文中文反复'], onFinished: () => {
+      init(first_line, { loop: false, strings: ['Dany_bullshit_', 'Dany_td_lemon_1900'], onFinished: () => {
         const first_cursor = document.querySelectorAll('.ityped-cursor')[0]
         first_cursor.style.display = 'none'
-        init(second_line, { loop: false, strings: ['中文中文2'], onFinished: () => {
+        init(second_line, { loop: false, strings: ['24 year old Superhero', '24 year old Codefarmer🙉'], onFinished: () => {
           const second_cursor = document.querySelectorAll('.ityped-cursor')[1]
           second_cursor.style.display = 'none'
         }})
@@ -52,17 +52,16 @@ export default {
 <style lang="scss">
   .home {
     width: 100%;
-    background: #ffad5a;
+    background: #f3f3f3;
     padding: 10px;
     .container{
       position: relative;
       .top-block {
         width: 100%;
-        padding-top: 40px;
+        padding-top: 150px;
         .logo-brain {
-          width: 150px;
-          height: 150px;
-          border: 5px solid #1a0841;
+          width: 283px;
+          height: 213px;
           border-radius: 100%;
           margin:  0 auto;
           display: block;
@@ -80,11 +79,13 @@ export default {
             text-align: center;
           }
           .line {
-            color: #1a0841;
-            font-size: 40px;
+            color: #333;
             display: inline-block;
-            font-weight: bolder;
             text-align: center;
+            margin-bottom: 20px;
+            font-size: 3rem;
+            font-family: "PingFang Bold";
+            font-weight: 1000;
           }
         }
       }

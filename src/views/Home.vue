@@ -8,7 +8,7 @@
             <h1 id="first-line" class="line"></h1>
           </div>
           <div class="line-container">
-            <h1 id="second-line" class="line">123</h1>
+            <h1 id="second-line" class="line"></h1>
           </div>
         </div>
       </div>
@@ -36,9 +36,15 @@ export default {
         }
       })
       logo.start()
-      const firstLine = document.querySelector('#first-line')
-      // const secondLine = document.querySelector('#second-line')
-      init(firstLine, { loop: false, strings: ['中文中文'] ,onFinished: () => {
+      const first_line = document.querySelector('#first-line')
+      const second_line = document.querySelector('#second-line')
+      init(first_line, { loop: false, strings: ['中文中文', '中文中文反复'], onFinished: () => {
+        const first_cursor = document.querySelectorAll('.ityped-cursor')[0]
+        first_cursor.style.display = 'none'
+        init(second_line, { loop: false, strings: ['中文中文2'], onFinished: () => {
+          const second_cursor = document.querySelectorAll('.ityped-cursor')[1]
+          second_cursor.style.display = 'none'
+        }})
       }})
   }
 }

@@ -1,59 +1,108 @@
 <template>
   <div class="home">
-    <div class="top-info">
-      <p class="top-text">banner is there place</p>
-      <div class="top-text-bg"></div>
+    <div class="container">
+      <div class="top-block">
+        <img class="logo-brain" src="../common/img/logo.jpg" alt="">
+        <div class="banner-info">
+          <div class="line-container">
+            <h1 id="first-line" class="line"></h1>
+          </div>
+          <div class="line-container">
+            <h1 id="second-line" class="line">123</h1>
+          </div>
+        </div>
+      </div>
+      <div class="block"></div>
     </div>
-    <div class="home-info"></div>
   </div>
 </template>
 
 <script>
 import * as basicScroll from 'basicscroll'
+import { init  } from 'ityped'
 export default {
   name: 'home',
   mounted () {
-    const top_text = basicScroll.create({
-        elem: document.querySelector('.top-text'),
+    const logo = basicScroll.create({
+        elem: document.querySelector('.logo-brain'),
         from: '0',
         to: '200px',
         direct: true,
         props: {
-          '--opacity': {
-              from: 1,
-              to: 0
+          '--turn': {
+              from: '0',
+              to: '0turn'
             }
         }
       })
-      top_text.start()
+      logo.start()
+      const firstLine = document.querySelector('#first-line')
+      // const secondLine = document.querySelector('#second-line')
+      init(firstLine, { loop: false, strings: ['中文中文'] ,onFinished: () => {
+      }})
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   .home {
     width: 100%;
-    background: #1b1d1b;
-    .top-info{
-      height: 600px;
-      background-image: 
-      radial-gradient(farthest-side at 0 0,rgba(52, 178, 136, .5),rgba(52, 178, 136, 0)),
-      radial-gradient(farthest-side at 100% 0,rgba(124,192,89,.8),rgba(124,192,89, 0)),
-      radial-gradient(farthest-side at 0 0,rgba(52, 178, 136, .4),rgba(52, 178, 136, 0));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: antiquewhite;
-      font-size: 3em;
-      font-family: 'Space-Mono';
-      position: sticky;
-      .top-text{
-        opacity: var(--opacity);
+    background: #ffad5a;
+    padding: 10px;
+    .container{
+      position: relative;
+      .top-block {
+        width: 100%;
+        padding-top: 40px;
+        .logo-brain {
+          width: 150px;
+          height: 150px;
+          border: 5px solid #1a0841;
+          border-radius: 100%;
+          margin:  0 auto;
+          display: block;
+          cursor: pointer;
+          transform: rotate(var(--turn));
+          transition: transform .2s linear;
+          &:hover {
+            transform: scale(1.1, 1.1);
+          }
+        }
+        .banner-info {
+          margin-top: 40px;
+          .line-container{
+            width: 100%;
+            text-align: center;
+          }
+          .line {
+            color: #1a0841;
+            font-size: 40px;
+            display: inline-block;
+            font-weight: bolder;
+            text-align: center;
+          }
+        }
+      }
+      .block {
+        width: 100%;
+        height: 2000px;
       }
     }
-    .home-info {
-      width: 100%;
-      height: 2000px;
-      background: #1b1d1b;
+    .top-text{
+      opacity: var(--opacity);
     }
   }
+  @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  .ityped-cursor {
+      font-size: 2.2rem;
+      opacity: 1;
+      animation: blink 0.3s infinite;
+      animation-direction: alternate;
+    }
 </style>

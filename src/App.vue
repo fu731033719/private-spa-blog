@@ -4,11 +4,20 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
+    <Nav></Nav>
     <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 <style lang="scss" scoped>
-  #app {
-    background: #1b1d1d;
-  }
 </style>
+<script>
+  import Nav from './views/Nav.vue'
+  import Footer from './views/Footer.vue'
+  export default {
+    components: {
+      Nav,
+      Footer
+    }
+  }
+</script>

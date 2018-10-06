@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  font: inherit;
+  background: 0 0;
+  -webkit-tap-highlight-color: transparent
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box
+}
+
+body,
+html {
+  margin: 0 auto
+}
+
+body {
+  font-family: -apple-system, "Space-Mono", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-size: 14px;
+  color: #4a4a4a;
+  -webkit-font-smoothing: antialiased
+}
+
+address,
+cite,
+dfn,
+em,
+i,
+var {
+  font-style: normal
+}
+
+li,
+ol,
+ul {
+  list-style: none
+}
+
+img {
+  border: none;
+  vertical-align: middle
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%
+}
+
+a {
+  text-decoration: none;
+  color: #333
+}
+
+a:active,
+a:hover {
+  outline: 0
+}
+
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0
+}
+
+input,
+select {
+  vertical-align: middle
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #f6f6f6;
+  margin: 1em 0;
+  padding: 0
+}
+
+select {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0
+}
+
+input:focus,
+textarea:focus {
+  outline: 0
+}
+
+input::-ms-clear {
+  display: none
+}
+
+[v-cloak] {
+  display: none
+}
+
+.clearfix {
+  height: 1%
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden
+}

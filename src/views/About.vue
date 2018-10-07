@@ -119,7 +119,7 @@
   export default {
     methods: {
       createContextAni (index) {
-        let to_num = 100*Number(index) + 20;
+        let to_num = 100*Number(index) + 200;
         let logo = basicScroll.create({
           elem: document.querySelectorAll('.context-item')[index],
           from: '0',

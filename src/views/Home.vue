@@ -31,13 +31,14 @@
         </div>
         <div class="spot-cut-line"></div>
       </div>
-      <div class="middle-block"></div>
+      <div class="middle-block">
+
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import * as basicScroll from 'basicscroll'
 import { init  } from 'ityped'
 export default {
   name: 'home',
@@ -52,19 +53,6 @@ export default {
     }
   },
   mounted () {
-    const logo = basicScroll.create({
-        elem: document.querySelector('.logo-brain'),
-        from: '0',
-        to: '200px',
-        direct: true,
-        props: {
-          '--turn': {
-              from: '0',
-              to: '0turn'
-            }
-        }
-      })
-      logo.start()
       const first_line = document.querySelector('#first-line')
       const second_line = document.querySelector('#second-line')
       init(first_line, { loop: false, strings: ['Dany_bullshit_', 'Dany_td_lemon_1900'], onFinished: () => {
@@ -94,7 +82,6 @@ export default {
           margin:  0 auto;
           display: block;
           cursor: pointer;
-          transform: rotate(var(--turn));
           transition: transform .2s linear;
           &:hover {
             transform: scale(1.1, 1.1);

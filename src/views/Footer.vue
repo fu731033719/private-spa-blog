@@ -1,9 +1,9 @@
 <template>
   <div class="foot">
-    <div class="top-info" style="padding:20px 0px 5px 0px;">
-      本博客搭建非商用目的（纯粹消磨业余指瘾😆），私人打边炉用博，欢迎pong友私聊进行灵魂交媾。
+    <div class="top-info" style="padding:40px 0px 5px 0px;">
+      本博客搭建非商用目的（纯粹消磨业余指瘾😆），私人打边炉用博，欢迎pong友私聊进行灵魂共振。
     </div>
-    <div class="option-block" style="padding:5px 0px; 20px 0px;">© 2015 ~ 2020 Dany_bullshit_td_lemon_1900保留所有权利</div>
+    <div class="option-block" style="padding:5px 0px 40px 0px;">© 2015 ~ 2020 Dany_bullshit_td_lemon_1900保留所有权利</div>
   </div>
 </template>
 <style lang="scss" scoped>

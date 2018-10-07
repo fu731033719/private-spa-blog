@@ -22,3 +22,9 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Perfetto';
+  src: url('./Perfetto-2.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

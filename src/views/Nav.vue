@@ -6,27 +6,27 @@
     <div class="mask-b mask"></div>
     <div :class="!show_flag ? 'nav' : 'nav nav-show' ">
       <div class="nav-logo">
-        <img src="../common/icon/keyboard.png" alt="">
-        <p>KeyBoardMan_Dany</p>
+        <img src="../common/img/nav-logo.png" alt="">
+        <p>Dany`s broken Kennel</p>
       </div>
       <div class="nav-list">
-        <router-link class="icon" to="/">
+        <router-link class="icon" to="/" v-tip.bottom="nav_info[0]">
           <img class="icon-img" src="../common/icon/target.svg" alt="">
           <p class="icon-p">主页</p>
         </router-link>
-        <router-link class="icon" to="/book">
+        <router-link class="icon" to="/book" v-tip.bottom="nav_info[1]">
           <img class="icon-img" src="../common/icon/book.svg" alt="">
           <p class="icon-p">藏经阁</p>
         </router-link>
-        <router-link class="icon" to="/about">
+        <router-link class="icon" to="/about" v-tip.bottom="nav_info[2]">
           <img class="icon-img" src="../common/icon/about.svg" alt="">
           <p class="icon-p">关于</p>
         </router-link>
-        <a class="icon" href="https://github.com/fu731033719" target="_blank">
+        <a class="icon" href="https://github.com/fu731033719" target="_blank" v-tip.bottom="nav_info[3]">
           <img class="icon-img" src="../common/icon/github.svg" alt="">
           <p class="icon-p">gayhub</p>
         </a>
-        <a class="icon" href="https://weibo.com/danybullshittdlemon" target="_blank">
+        <a class="icon" href="https://weibo.com/danybullshittdlemon" target="_blank" v-tip.bottom="nav_info[4]">
           <img class="icon-img" src="../common/icon/weibo.svg" alt="">
           <p class="icon-p">大眼怪</p>
         </a>
@@ -35,7 +35,7 @@
   </div>
   
 </template>
-<style lang="scss" scope>
+<style lang="scss">
   .mask {
     z-index: 200;
   }
@@ -49,21 +49,21 @@
   .mask-l {
     width: 10px;
     height: 100%;
-    background: #ff5959;
+    background: #45315d;
     left: 0;
     position: fixed;
   }
   .mask-r {
     width: 10px;
     height: 100%;
-    background: #ff5959;
+    background: #45315d;
     right: 0;
     position: fixed;
   }
   .mask-t {
     width: 100%;
     height: 10px;
-    background: #ff5959;
+    background: #45315d;
     bottom: 0;
     position: fixed;
   }
@@ -71,7 +71,7 @@
     width: 100%;
     height: 60px;
     line-height: 60px;
-    background: #ff5959;
+    background: #45315d;
     position: fixed;
     top: 0;
     transform: translateY(-60px);
@@ -88,13 +88,13 @@
         opacity: 1;
       }
       img {
-        margin: 0px 20px;
-        width: 62px;
-        height: 22px;
+        margin: 0px 5px 0px 15px;
+        width: 25px;
+        height: 27px;
       }
       p{
         display: inline-block;
-        font-size: 17px;
+        font-size: 15px;
         color: #fff;
         font-weight: bold;
       }
@@ -144,13 +144,20 @@
     data () {
       return {
         scroll: '',
-        show_flag: false
+        show_flag: false,
+        nav_info: [
+          '🐶窝有点乱，见谅',
+          '施主里边请👺',
+          'Understand me 🤡',
+          '世纪佳缘资料页😘',
+          '欢迎视监🧐',
+        ]
       }
     },
     methods: {
       navShow () {
         let scroll_nav = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
-        if (scroll_nav > 50) {
+        if (scroll_nav > 0) {
           this.show_flag = true
         } else {
           this.show_flag = false

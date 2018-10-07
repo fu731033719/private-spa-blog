@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-
+import Book from './views/Book.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -13,8 +13,8 @@ export default new Router({
     },
     {
       path: '/book',
-      name: 'home',
-      component: Home
+      name: 'book',
+      component: Book
     },
     {
       path: '/about',

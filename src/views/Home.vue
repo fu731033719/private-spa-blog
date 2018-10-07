@@ -2,7 +2,7 @@
   <div class="home">
     <div class="container">
       <div class="top-block">
-        <img class="logo-brain" src="../common/img/logo.jpg" alt="">
+        <img class="logo-brain" src="../common/img/logo.png" alt="">
         <div class="banner-info">
           <div class="line-container">
             <h1 id="first-line" class="line"></h1>
@@ -11,8 +11,27 @@
             <h2 id="second-line" class="line"></h2>
           </div>
         </div>
+        <div class="private">
+          <div class="private-item" slot="reference" v-tip="private_info[0]">
+            <img class="private-img" src="../common/icon/sheshou.svg" alt="">
+            <p class="private-p">射手座</p>
+          </div>
+          <div class="private-item" v-tip="private_info[1]">
+            <img class="private-img" src="../common/icon/man.svg" alt="">
+            <p class="private-p">男性</p>
+          </div>
+          <div class="private-item" v-tip="private_info[2]">
+            <img class="private-img" src="../common/icon/game.svg" alt="">
+            <p class="private-p">玩家</p>
+          </div>
+          <div class="private-item" v-tip="private_info[3]">
+            <img class="private-img" src="../common/icon/superman.svg" alt="">
+            <p class="private-p">业余拯救世界</p>
+          </div>
+        </div>
+        <div class="spot-cut-line"></div>
       </div>
-      <div class="block"></div>
+      <div class="middle-block"></div>
     </div>
   </div>
 </template>
@@ -22,6 +41,16 @@ import * as basicScroll from 'basicscroll'
 import { init  } from 'ityped'
 export default {
   name: 'home',
+  data () {
+    return {
+      private_info: [
+        '自由的气息🚹',
+        '本博客也兼觅友😊',
+        '硬核Gamer🏆',
+        '业余时间拯救多块中西方异世大陆🗡'
+      ]
+    }
+  },
   mounted () {
     const logo = basicScroll.create({
         elem: document.querySelector('.logo-brain'),
@@ -41,7 +70,7 @@ export default {
       init(first_line, { loop: false, strings: ['Dany_bullshit_', 'Dany_td_lemon_1900'], onFinished: () => {
         const first_cursor = document.querySelectorAll('.ityped-cursor')[0]
         first_cursor.style.display = 'none'
-        init(second_line, { loop: false, strings: ['24 year old Superhero', '24 year old Codefarmer🙉'], onFinished: () => {
+        init(second_line, { loop: false, strings: ['24 year old Superhero', '24 year old Codefarmer QAQ!'], onFinished: () => {
           const second_cursor = document.querySelectorAll('.ityped-cursor')[1]
           second_cursor.style.display = 'none'
         }})
@@ -52,16 +81,15 @@ export default {
 <style lang="scss">
   .home {
     width: 100%;
-    background: #f3f3f3;
     padding: 10px;
-    .container{
+    .container {
       position: relative;
       .top-block {
         width: 100%;
         padding-top: 150px;
         .logo-brain {
-          width: 283px;
-          height: 213px;
+          width: 167px;
+          height: 174px;
           border-radius: 100%;
           margin:  0 auto;
           display: block;
@@ -73,6 +101,7 @@ export default {
           }
         }
         .banner-info {
+          min-height: 250px;
           margin-top: 40px;
           .line-container{
             width: 100%;
@@ -83,13 +112,55 @@ export default {
             display: inline-block;
             text-align: center;
             margin-bottom: 20px;
-            font-size: 3rem;
-            font-family: "PingFang Bold";
-            font-weight: 1000;
+            font-size: 4.5rem;
+            font-weight: bolder;
+            font-family: "Perfetto";
           }
         }
+        .private {
+          display: flex;
+          justify-content:center;
+          .private-item {
+            padding: 0px 20px;
+            height: 25px;
+            line-height: 25px;
+            display: inline-block;
+            vertical-align: middle;
+            color: #fff;
+            opacity: .8;
+            transition: .15s;
+            cursor: pointer;
+            &:hover {
+              opacity: 1;
+              .private-img {
+                transform: scale(1.1, 1.1);
+              }
+            }
+            .private-img {
+              width: 25px;
+              height: 25px;
+              display: inline-block;
+              padding-right: 5px;
+              float: left;
+              transition: .15s;
+            }
+            .private-p{
+              color: #333;
+              float: left;
+              line-height: 25px;
+              display: inline-block;
+            }
+          }
+        }
+        .spot-cut-line {
+          width: 95%;
+          height: 1px;
+          margin: 0 auto;
+          margin-top: 50px;
+          border: 1px dotted #ddd;
+        }
       }
-      .block {
+      .middle-block {
         width: 100%;
         height: 2000px;
       }

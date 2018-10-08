@@ -32,7 +32,12 @@
         <div class="spot-cut-line"></div>
       </div>
       <div class="middle-block">
-
+        <div class="article-block">
+          <div class="article-list">
+            
+          </div>
+        </div>
+        <div class="info-block"></div>
       </div>
     </div>
   </div>
@@ -132,7 +137,7 @@ export default {
               transition: .15s;
             }
             .private-p{
-              color: #333;
+              color: #333;  
               float: left;
               line-height: 25px;
               display: inline-block;
@@ -150,6 +155,20 @@ export default {
       .middle-block {
         width: 100%;
         height: 2000px;
+        padding: 40px 0;
+        .article-block {
+          width: 50%;
+          height: 100%;
+          display: inline-block;
+          float: left;
+          border-right: 1px dotted #ddd;
+        }
+        .info-block {
+          width: 50%;
+          height: 100%;
+          display: inline-block;
+          float: left;
+        }
       }
     }
     .top-text{

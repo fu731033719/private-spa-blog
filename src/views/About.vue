@@ -95,8 +95,8 @@
         width: 60%;
         line-height: 40px;
         margin: 0 auto;
-        margin-bottom: 60px;
-        font-size: 26px;
+        margin-bottom: 40px;
+        font-size: 20px;
       }
       @for $i from 1 through 12 { .item-#{$i} { opacity: var(--opacity); transform: translateY(var(--trans_y)); transition: .5s;} }
     }
@@ -131,7 +131,7 @@
                 to: '1'
               },
             '--trans_y': {
-              from: '-20px',
+              from: '-10px',
               to: '0'
             }
           }

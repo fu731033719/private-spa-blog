@@ -33,11 +33,100 @@
       </div>
       <div class="middle-block">
         <div class="article-block">
-          <div class="article-list">
+          <div class="araticle-list">
+
+            <div class="article-item">
+              <h1 class="article-title">lorem title标题</h1>
+              <p class="article-time">———— 2018.10.09</p>
+              <div class="tag-list">
+                <span class="tag">node.js</span>
+                <span class="tag">css</span>
+                <span class="tag">peace&love</span>
+                <span class="tag">javascript</span>
+              </div>
+              <p class="article-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsa. Ipsum quia consectetur maxime, minus reprehenderit atque doloremque quidem! Molestiae natus dolor ad ipsam blanditiis error excepturi suscipit nesciunt distinctio!</p>
+            </div>
+
+            <div class="article-item">
+              <h1 class="article-title">lorem title标题</h1>
+              <p class="article-time">———— 2018.10.09</p>
+              <div class="tag-list">
+                <span class="tag">node.js</span>
+                <span class="tag">css</span>
+                <span class="tag">peace&love</span>
+                <span class="tag">javascript</span>
+              </div>
+              <p class="article-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsa. Ipsum quia consectetur maxime, minus reprehenderit atque doloremque quidem! Molestiae natus dolor ad ipsam blanditiis error excepturi suscipit nesciunt distinctio!</p>
+            </div>
+
+            <div class="article-item">
+              <h1 class="article-title">lorem title标题</h1>
+              <p class="article-time">———— 2018.10.09</p>
+              <div class="tag-list">
+                <span class="tag">node.js</span>
+                <span class="tag">css</span>
+                <span class="tag">peace&love</span>
+                <span class="tag">javascript</span>
+              </div>
+              <p class="article-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsa. Ipsum quia consectetur maxime, minus reprehenderit atque doloremque quidem! Molestiae natus dolor ad ipsam blanditiis error excepturi suscipit nesciunt distinctio!</p>
+            </div>
+
+            <div class="article-item">
+              <h1 class="article-title">lorem title标题</h1>
+              <p class="article-time">———— 2018.10.09</p>
+              <div class="tag-list">
+                <span class="tag">node.js</span>
+                <span class="tag">css</span>
+                <span class="tag">peace&love</span>
+                <span class="tag">javascript</span>
+              </div>
+              <p class="article-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsa. Ipsum quia consectetur maxime, minus reprehenderit atque doloremque quidem! Molestiae natus dolor ad ipsam blanditiis error excepturi suscipit nesciunt distinctio!</p>
+            </div>
+
+            <div class="article-item">
+              <h1 class="article-title">lorem title标题</h1>
+              <p class="article-time">———— 2018.10.09</p>
+              <div class="tag-list">
+                <span class="tag">node.js</span>
+                <span class="tag">css</span>
+                <span class="tag">peace&love</span>
+                <span class="tag">javascript</span>
+              </div>
+              <p class="article-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsa. Ipsum quia consectetur maxime, minus reprehenderit atque doloremque quidem! Molestiae natus dolor ad ipsam blanditiis error excepturi suscipit nesciunt distinctio!</p>
+            </div>
+
+          </div>
+          <router-link class="icon" to="/book">
+            <div class="all-list">...</div>
+          </router-link>
+        </div>
+        <div class="info-block">
+          <div class="info-item">
+            <h1>0<p class="title-p">1</p></h1>
+            <p class="info-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eius perspiciatis itaque enim dignissimos reiciendis velit harum ad accusamus, in praesentium veniam iste nemo qui, maxime earum! Porro, quod neque?</p>
+          </div>
+
+          <div class="info-item">
+            <h1>0<p class="title-p">2</p></h1>
+            <p class="info-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eius perspiciatis itaque enim dignissimos reiciendis velit harum ad accusamus, in praesentium veniam iste nemo qui, maxime earum! Porro, quod neque?</p>
+            
+          </div>
+          <div class="info-item">
+            <h1>0<p class="title-p">3</p></h1>
+            <p class="info-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eius perspiciatis itaque enim dignissimos reiciendis velit harum ad accusamus, in praesentium veniam iste nemo qui, maxime earum! Porro, quod neque?</p>
+            
+          </div>
+          <div class="info-item">
+            <h1>0<p class="title-p">4</p></h1>
+            <p class="info-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eius perspiciatis itaque enim dignissimos reiciendis velit harum ad accusamus, in praesentium veniam iste nemo qui, maxime earum! Porro, quod neque?</p>
+            
+          </div>
+          <div class="info-item">
+            <h1>0<p class="title-p">5</p></h1>
+            <p class="info-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eius perspiciatis itaque enim dignissimos reiciendis velit harum ad accusamus, in praesentium veniam iste nemo qui, maxime earum! Porro, quod neque?</p>
             
           </div>
         </div>
-        <div class="info-block"></div>
       </div>
     </div>
   </div>
@@ -45,6 +134,7 @@
 
 <script>
 import { init  } from 'ityped'
+// import echarts from 'echarts'
 export default {
   name: 'home',
   data () {
@@ -57,6 +147,7 @@ export default {
       ]
     }
   },
+  methods: {},
   mounted () {
       const first_line = document.querySelector('#first-line')
       const second_line = document.querySelector('#second-line')
@@ -162,18 +253,85 @@ export default {
           display: inline-block;
           float: left;
           border-right: 1px dotted #ddd;
+          padding-top: 100px;
+          .all-list {
+            width: 80%;
+            margin: 0 auto;
+            text-align: right;
+            font-size: 50px;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+              color: #45315d;
+            }
+          }
         }
         .info-block {
           width: 50%;
           height: 100%;
+          padding-top: 100px;
           display: inline-block;
           float: left;
         }
       }
     }
-    .top-text{
-      opacity: var(--opacity);
+  }
+  .article-item {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+    .article-title {
+      font-size: 24px;
+      font-weight: bold;
     }
+    .article-time {
+      text-align: right;
+      color: #ddd;
+    }
+    .tag-list{
+      width: 100%;
+      margin-bottom: 15px;
+      .tag {
+        height: 20px;
+        line-height: 20px;
+        color: #fff;
+        font-size: 14px;
+        padding: 0 5px;
+        margin: 0 5px;
+        border-radius: 5px;
+        background: #333;
+        display: inline-block;
+        transition: .3s;
+        cursor: pointer;
+        &:hover {
+          border-radius: 8px;
+          background: #45315d;
+        }
+      }
+    }
+    .article-context {
+      font-size: 16px;
+      line-break: 14px;
+    }
+  }
+  .info-item {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    h1{
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+      .title-p {
+        display: inline-block;
+        color: #ff5959;
+        font-size: 30px;
+      }
+    }
+    .info-context {
+        margin-bottom: 20px;
+      }
   }
   @keyframes blink {
       0% {

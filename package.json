@@ -10,6 +10,7 @@
   "dependencies": {
     "basicscroll": "^2.1.1",
     "echarts": "^4.2.0-rc.1",
+    "mongoose": "^5.3.10",
     "smooth-scroll": "^14.2.1",
     "vtip": "^1.0.6",
     "vue": "^2.5.17",

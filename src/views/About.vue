@@ -4,7 +4,7 @@
       <canvas id="spark"></canvas>
       <div class="context">
         <h1>咸鱼生平</h1>
-        <h2>(可以尝试疯狂click你的鼠标😋)</h2>
+        <h2>(click scroll~ click scroll😋)</h2>
         <div class="context-item item-1">
           付晨伟，农历甲戌年生人(双十二之子)，非典型的浓密发量型程序猿.
         </div>

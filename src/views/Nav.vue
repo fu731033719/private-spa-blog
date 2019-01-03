@@ -7,17 +7,17 @@
     <div :class="!show_flag ? 'nav' : 'nav nav-show' ">
       <div class="nav-logo">
         <img src="../common/img/nav-logo.png" alt="">
-        <p>Dany`s broken Kennel</p>
+        <p>Dany`s online resume</p>
       </div>
       <div class="nav-list">
         <router-link class="icon" to="/" v-tip.bottom="nav_info[0]">
           <img class="icon-img" src="../common/icon/target.svg" alt="">
           <p class="icon-p">主页</p>
         </router-link>
-        <router-link class="icon" to="/book" v-tip.bottom="nav_info[1]">
+        <!-- <router-link class="icon" to="/book" v-tip.bottom="nav_info[1]">
           <img class="icon-img" src="../common/icon/book.svg" alt="">
           <p class="icon-p">藏经阁</p>
-        </router-link>
+        </router-link> -->
         <router-link class="icon" to="/about" v-tip.bottom="nav_info[2]">
           <img class="icon-img" src="../common/icon/about.svg" alt="">
           <p class="icon-p">关于</p>

@@ -10,10 +10,10 @@
         <p>Dany`s online resume</p>
       </div>
       <div class="nav-list">
-        <router-link class="icon" to="/" v-tip.bottom="nav_info[0]">
+        <!-- <router-link class="icon" to="/" v-tip.bottom="nav_info[0]">
           <img class="icon-img" src="../common/icon/target.svg" alt="">
           <p class="icon-p">主页</p>
-        </router-link>
+        </router-link> -->
         <!-- <router-link class="icon" to="/book" v-tip.bottom="nav_info[1]">
           <img class="icon-img" src="../common/icon/book.svg" alt="">
           <p class="icon-p">藏经阁</p>

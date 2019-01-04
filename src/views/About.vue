@@ -3,45 +3,10 @@
     <div class="container">
       <canvas id="spark"></canvas>
       <div class="context">
-        <h1>咸鱼生平</h1>
+        <img class="pic-self" src="../common/img/pic.png">
+        <h1>Introduce</h1>
         <h2>(click scroll~ click scroll😋)</h2>
-        <div class="context-item item-1">
-          付晨伟，农历甲戌年生人(双十二之子)，非典型的浓密发量型程序猿.
-        </div>
-        <div class="context-item item-2">
-          工科生、原美工方向，受硅基真神感召从而变道的Codefarmer👨‍💻（Hallelu Yah），从不狂热吹嘘单一语言或框架，保持稳定中立的一只菜鸡😀.
-        </div>
-        <div class="context-item item-3">
-          本质是无神论者，在特定情况下信仰飞天意面神教🙌
-        </div>
-        <div class="context-item item-4">
-          沉迷DND以及克苏鲁、SCP，熟读战锤通史，拥有平庸的音乐天赋（在水磨功夫下通关国粹二胡业余等级考试🐷）但内核是一个热情的爵士乐爱好者🎷，业余心理医生（通过进食促使自己与同行者获得愉悦+1同时获得多余热量+2）.
-        </div>
-        <div class="context-item item-5">
-          平时是一个平平无奇的上班族，但私底下其实是忙碌的救世主，一周内会去不同大陆进行布道救世的行动，具体行动持续时间视项目紧张程度而定🎮。
-        </div>
-        <div class="context-item item-6">
-          夜行跑者，通常习惯在10点🕙后进行炼体活动🤳(下方CET-4水平的翻译可略过😘)
-        </div>
-        <div class="context-item item-7">
-          Dany_td_lemon_1900. Born in December 12, 1994. Atypical coder with lots of hair
-        </div>
-        <div class="context-item item-8">
-          Engineering student. Used want to be a designer. Si-Jesus Christ call me to be a Codefarmer👨‍💻（Hallelu Yah）, Peace&Love Never Fanaticism boasts a single language
-          But still is a beginner.😀
-        </div>
-        <div class="context-item item-9">
-          The essence is atheist, in a specific case, belief in flying heaven, pastoral theism.
-        </div>
-        <div class="context-item item-10">
-          This is too difficult to translate.😥（I like DND、Cthulhu、Warhammer、Jazz、psychology）
-        </div>
-        <div class="context-item item-11">
-          Usually, it is an ordinary office worker, but in private, it is actually a busy savior. In a week, he will go to different continents to conduct missionary salvation. The duration of specific actions depends on the tension of the project🎮.
-        </div>
-        <div class="context-item item-12">
-          Night runners, usually used to perform🤳 refining activities after 10 o'clock🕙
-        </div>
+        <div :class="`context-item item-${index+1}`" v-for="(item, index) in article_list" :key=index v-text="item"></div>
       </div>
       <div class="down-scroll">
         <img src="../common/icon/down-scroll.svg" alt="">
@@ -71,6 +36,12 @@
     padding: 10px;
     background: #fff;
     min-height: 2000px;
+    .pic-self {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      margin-top: 200px;
+    }
     #spark {
       width: 100%;
       height: 100%;
@@ -81,7 +52,7 @@
       width: 100%;
       text-align: center;
       h1 {
-        margin-top: 200px;
+        margin-top: 50px;
         margin-bottom: 20px;
         font-weight: bold;
         font-size: 44px;
@@ -117,6 +88,24 @@
 <script>
   import * as basicScroll from 'basicscroll'
   export default {
+    data() {
+      return {
+        article_list: [
+          '付晨伟，农历甲戌年生人(双十二之子)，非典型的浓密发量型程序猿.',
+          '工科生、受硅基真神感召从而变道的Codefarmer👨‍💻（Hallelu Yah），从不狂热吹嘘单一语言或框架，保持稳定中立😀.',
+          '熟悉Http协议及浏览器原理',
+          '了解模块化规范，以及ES6+语法特性，轻微代码洁癖，能编写符合规范的js代码',
+          '熟练掌握Vue及其生态下的各种工具（Vue-router、Vuex、Axios、）等的使用',
+          '了解webpack打包机制及性能优化，能对基础脚手架目录进行业务化修改',
+          '熟练使用Git、SVN等团队协作版本管理工具，能有效率的进行团队开发',
+          '对后端开发始终抱有热情，多次在个人项目中进行服务器搭建配置及node服务端尝试',
+          '本质是无神论者，在特定情况下信仰飞天意面神教🙌',
+          '沉迷DND以及克苏鲁、SCP，熟读战锤通史，拥有平庸的音乐天赋（在水磨功夫下通关国粹二胡业余等级考试🐷）但内核是一个热情的爵士乐爱好者🎷，业余心理医生（通过进食促使自己与同行者获得愉悦+1同时获得多余热量+2）.',
+          '平时是一个平平无奇的上班族，但私底下其实是忙碌的救世主，一周内会去不同大陆进行布道救世的行动，具体行动持续时间视项目紧张程度而定🎮。',
+          '夜行跑者，通常习惯在10点🕙后进行炼体活动🤳',
+        ]
+      }
+    },
     methods: {
       createContextAni (index) {
         let to_num = 100*Number(index) + 200;

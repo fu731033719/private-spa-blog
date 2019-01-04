@@ -103,13 +103,12 @@
         <div class="info-block">
           <div class="info-item">
             <h1>0<p class="title-p">1</p></h1>
-            <p class="info-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eius perspiciatis itaque enim dignissimos reiciendis velit harum ad accusamus, in praesentium veniam iste nemo qui, maxime earum! Porro, quod neque?</p>
+            <p class="info-context">熟练掌握html5&css3以及现代前端布局构建技巧</p>
           </div>
 
           <div class="info-item">
             <h1>0<p class="title-p">2</p></h1>
-            <p class="info-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eius perspiciatis itaque enim dignissimos reiciendis velit harum ad accusamus, in praesentium veniam iste nemo qui, maxime earum! Porro, quod neque?</p>
-            
+            <p class="info-context">熟练运用sass less stylus等现代样式预编译语言</p>
           </div>
           <div class="info-item">
             <h1>0<p class="title-p">3</p></h1>
